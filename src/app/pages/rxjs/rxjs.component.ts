@@ -26,7 +26,7 @@ export class RxjsComponent implements OnInit, OnDestroy {
   }
 
   //Se ejecuta cuando se cambia a otra página (componente)
-  ngOnDestroy(){
+  ngOnDestroy() {
     console.log('la pagina se va a cerrar');
     this.subscription.unsubscribe();
   }
@@ -43,16 +43,6 @@ export class RxjsComponent implements OnInit, OnDestroy {
         }
         //Operador next notifica un valor al subscriptor
         observer.next(salida);
-
-        // if (contador === 3) {
-        //   clearInterval(intervalo);
-        //   observer.complete();
-        // }
-
-        // if (contador == 2) {
-        //   //clearInterval(intervalo);
-        //   observer.error('Auxilio!')
-        // }
       }, 1000);
     }).pipe(
       //Operador map transforma la data recibida en lo que queramos
