@@ -47,7 +47,8 @@ export class RegisterComponent implements OnInit {
       password: new FormControl(null, Validators.required),
       password2: new FormControl(null, Validators.required),
       condiciones: new FormControl(false)
-    }, { validators: this.sonIguales('password', 'password2') });
+    },
+     { validators: this.sonIguales('password', 'password2') });
   }
 
   registrarUsuario() {
